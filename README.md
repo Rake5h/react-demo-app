@@ -87,3 +87,4 @@ This app is ready to deploy on **AWS Amplify** using GitHub integration.
 ## 🙌 Author
 
 Rakesh S
+web developer
