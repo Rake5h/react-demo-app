@@ -1,0 +1,171 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --primary: #4f46e5;
+  --primary-light: #6366f1;
+  --danger: #ef4444;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 440px;
+  margin: 4rem auto;
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- NAV ---------- */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* ---------- HEADERS ---------- */
+
+h1 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.counter {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- INPUT ---------- */
+
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.task-input input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.task-input button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background: var(--primary-light);
+}
+
+/* ---------- FILTERS ---------- */
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filters button {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.filters button:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ---------- TASK LIST ---------- */
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.task span {
+  cursor: pointer;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task input {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+
+.task button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.task button:hover {
+  opacity: 0.7;
+}
+
+/* ---------- EMPTY ---------- */
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 1rem;
+}
